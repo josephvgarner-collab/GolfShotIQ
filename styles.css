@@ -1,3 +1,4 @@
+/* styles.css */
 :root{
   --blue: #21216E;
   --blue-dark: #1A1A57;
@@ -34,11 +35,16 @@ body{
   margin-bottom:56px;
 }
 
+/* Brand link (clickable home) */
 .brand{
   display:flex;
   align-items:center;
   gap:14px;
+  text-decoration:none;
+  color: var(--blue);
 }
+
+.brand:hover{ opacity:0.88; }
 
 .logo{
   width:60px;
@@ -83,6 +89,7 @@ body{
   margin-top:4px;
 }
 
+/* Status button */
 .hero-status{
   margin-top:22px;
 }
@@ -124,7 +131,7 @@ body{
   padding:22px 0;
 }
 
-/* Step 2 desktop spacing: a bit more room so it’s not kissing the phone */
+/* Step 2 desktop spacing */
 .how-row.step2{
   gap:38px;
 }
@@ -159,7 +166,6 @@ body{
   max-width:380px;
 }
 
-/* iPhone frame */
 .phone-frame{
   position:relative;
   border-radius:34px;
@@ -259,7 +265,7 @@ body{
   text-decoration:underline;
 }
 
-/* Mobile: always Text then Phone, no tilts */
+/* Mobile: all steps text then phone; disable tilts */
 @media (max-width:820px){
   .how-row{
     grid-template-columns:1fr;
@@ -267,7 +273,7 @@ body{
     padding:32px 0;
   }
 
-  /* Force order on mobile for ALL steps: copy first, media second */
+  /* Ensure text comes before phone on mobile for every step */
   .how-copy{ order: 1; }
   .how-media{ order: 2; }
 
@@ -276,7 +282,6 @@ body{
     justify-content:flex-start;
   }
 
-  /* Turn off tilt on mobile */
   .phone-shell{
     max-width:100%;
     transform:none !important;
