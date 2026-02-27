@@ -111,6 +111,12 @@ h1{
   font-size: 18px;
   line-height: 1.55;
   color: var(--muted);
+
+  .subhead.secondary{
+  margin-top: 6px;
+  font-weight: 600;
+  color: var(--navy);
+}
 }
 
 .ctaRow{
