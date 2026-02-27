@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GolfShot IQ — Coming Soon</title>
-    <meta name="description" content="GolfShot IQ — Strokes gained, simplified. Coming soon." />
+    <meta
+      name="description"
+      content="GolfShot IQ — Strokes Gained… simplified. Coming soon."
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
     <main class="wrap">
+      <!-- Top -->
       <header class="top">
         <div class="brand">
           <img class="logo" src="logo.jpg" alt="GolfShot IQ logo" />
@@ -22,6 +26,7 @@
         <a href="#waitlist" class="topCta">Join waitlist</a>
       </header>
 
+      <!-- Hero -->
       <section class="hero">
         <div class="pill">
           <span class="dot"></span>
@@ -31,60 +36,67 @@
         <h1>Strokes Gained… simplified.</h1>
 
         <p class="subhead">
-          A clean strokes gained tracker for everyday golfers. Enter a round in minutes and get clear
-          direction on what to practice next. Coming soon.
+          A clean strokes gained tracker for everyday golfers. Enter a round in minutes and get
+          clear direction on what to practice next.
         </p>
 
         <div class="ctaRow">
-          <a href="#waitlist" class="btn primary">Get early access</a>
+          <a href="#waitlist" class="btn primary">Join the waitlist</a>
           <a href="#how" class="btn">How it works</a>
         </div>
       </section>
 
+      <!-- Feature Cards -->
       <section id="how" class="cards">
         <div class="card">
           <div class="icon"></div>
-          <h3>Fast entry</h3>
-          <p>Quick shot entry with just the details that matter.</p>
+          <h3>Fast Entry</h3>
+          <p>Quick shot input with just the details that matter.</p>
         </div>
 
         <div class="card">
           <div class="icon"></div>
-          <h3>Benchmark by skill</h3>
-          <p>See strokes gained vs realistic handicap-based baselines.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon"></div>
-          <h3>Practice direction</h3>
-          <p>Turn strokes gained into a weekly focus so your limited practice time matters.</p>
-        </div>
-      </section>
-
-      <section class="who">
-        <div class="whoInner">
-          <h2>Built for real golfers</h2>
+          <h3>Benchmark by Skill</h3>
           <p>
-            If you play once a week and maybe practice once a week, you don’t need sensors and
-            dashboards. You need direction: what to work on next.
+            Choose your benchmark — from <strong>TOUR Pro</strong> to 20 handicap — and see where
+            you’re gaining or losing strokes.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon"></div>
+          <h3>Practice Direction</h3>
+          <p>
+            Know what’s costing you strokes so your next practice session actually moves your score.
           </p>
         </div>
       </section>
 
+      <!-- Positioning -->
+      <section class="who">
+        <div class="whoInner">
+          <h2>Built for golfers who want clarity.</h2>
+          <p>
+            Track strokes gained during your round or enter it after. No hardware. No sensors. Just
+            simple inputs and clear direction on what to practice next.
+          </p>
+        </div>
+      </section>
+
+      <!-- Waitlist -->
       <section id="waitlist" class="waitlist">
         <h2>Join the waitlist</h2>
         <p class="muted">Get notified when the beta opens. No spam.</p>
 
-        <form class="form" action="https://formspree.io/f/REPLACE_ME" method="POST">
+        <!-- TEMP: This will work once you paste your Mailchimp form action URL (or embed code) -->
+        <!-- For now, this is a simple email field + button you can wire up. -->
+        <form class="form" action="#" method="POST">
           <input class="input" type="email" name="email" placeholder="you@example.com" required />
           <button class="btn primary" type="submit">Notify me</button>
         </form>
-
-        <p class="tiny muted">
-          (Hook this form up to Formspree/Mailchimp/ConvertKit later—or tell me what you want and I’ll swap it.)
-        </p>
       </section>
 
+      <!-- Footer -->
       <footer class="footer">
         <div>© <span id="year"></span> GolfShot IQ</div>
         <div>Contact: <span class="contact">hello@golfshotiq.com</span></div>
