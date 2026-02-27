@@ -1,7 +1,6 @@
 :root{
-  /* Clean navy (clearly blue, not black) */
-  --navy: #243b55;        /* primary text navy */
-  --navy-deep: #1b2a41;   /* buttons */
+  --navy: #37468c;        /* your chosen blue */
+  --navy-deep: #2c3970;   /* slightly darker version for buttons */
 
   --muted:#64748b;
   --muted2:#94a3b8;
