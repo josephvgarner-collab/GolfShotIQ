@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy — GolfShot IQ</title>
+  <meta name="description" content="Privacy Policy for GolfShot IQ." />
+
+  <link rel="icon" type="image/png" href="logo.png?v=1">
+  <link rel="apple-touch-icon" href="logo.png?v=1">
+  <link rel="stylesheet" href="styles.css?v=900" />
+</head>
+
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="brand">
+        <img src="logo.png" alt="GolfShot IQ logo" class="logo">
+        <div class="brand-name">GolfShot IQ</div>
+      </div>
+    </header>
+
+    <section class="positioning">
+      <h2>Privacy Policy</h2>
+      <p><strong>Last updated:</strong> <span id="d"></span></p>
+
+      <p>
+        This is a short, plain-English privacy policy for the staged GolfShot IQ website and early app releases.
+        We’ll update it as the product launches and evolves.
+      </p>
+
+      <h3>What we collect</h3>
+      <p>
+        If you contact us by email, we receive the information you send (like your email address and message).
+        When the app is live, it may also collect golf round and shot inputs you choose to enter.
+      </p>
+
+      <h3>How we use information</h3>
+      <p>
+        We use information to respond to inquiries, operate the product, and improve the experience.
+        We do not sell your personal information.
+      </p>
+
+      <h3>Third-party services</h3>
+      <p>
+        As we launch, we may use standard services for hosting, analytics, and app delivery.
+        Those providers may process limited data as needed to provide their services.
+      </p>
+
+      <h3>Data retention</h3>
+      <p>
+        We keep information only as long as needed to operate the service and meet legal or operational requirements.
+      </p>
+
+      <h3>Contact</h3>
+      <p>
+        Questions? Email us at <a class="footer-link" href="mailto:hello@golfshotiq.com">hello@golfshotiq.com</a>.
+      </p>
+
+      <p>
+        <a class="footer-link" href="index.html">Back to home</a>
+      </p>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> GolfShot IQ</div>
+      <div class="footer-links">
+        <a class="footer-link" href="terms.html">Terms</a>
+        <a class="footer-link" href="mailto:hello@golfshotiq.com">Contact</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("d").textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>
