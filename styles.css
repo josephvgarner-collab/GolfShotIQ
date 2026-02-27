@@ -1,13 +1,13 @@
 :root{
-  /* Lighter navy so it reads BLUE, not black */
-  --navy: #334155;        /* slate */
-  --navy-deep: #1e293b;   /* for primary buttons */
-  --muted:#64748b;        /* cool gray */
+  /* Clean navy (clearly blue, not black) */
+  --navy: #243b55;        /* primary text navy */
+  --navy-deep: #1b2a41;   /* buttons */
+
+  --muted:#64748b;
   --muted2:#94a3b8;
   --border:#e2e8f0;
   --bg:#ffffff;
 
-  /* Keep tiles white; keep icon chip light gray */
   --tile:#ffffff;
   --chip:#f1f5f9;
 
@@ -63,7 +63,6 @@ body{
   display:flex;
   flex-direction:column;
   gap:4px;
-  min-width:0;
 }
 
 .brandName{
@@ -77,9 +76,9 @@ body{
 .brandTag{
   font-size: 13px;
   color: var(--muted);
-  letter-spacing: -0.01em;
 }
 
+/* Top CTA */
 .topCta{
   border-radius:999px;
   border:1px solid var(--border);
@@ -88,7 +87,6 @@ body{
   color:var(--navy);
   font-size:14px;
   background:#fff;
-  white-space: nowrap;
 }
 
 .topCta:hover{
@@ -176,7 +174,7 @@ h1{
   box-shadow: var(--shadow);
 }
 
-/* Icon chip: bigger so it “captures” the icon */
+/* Icon chip */
 .icon{
   width:52px;
   height:52px;
@@ -208,7 +206,7 @@ h1{
   font-size: 14px;
 }
 
-/* Positioning section */
+/* Positioning */
 .who{
   margin-top: 20px;
 }
@@ -282,7 +280,6 @@ h2{
   .cards{ grid-template-columns: 1fr; }
 }
 
-/* iPhone: stack header so Join Waitlist never breaks */
 @media (max-width: 600px){
   .top{
     flex-direction: column;
@@ -292,21 +289,8 @@ h2{
   .topCta{
     width: 100%;
     text-align: center;
-    padding: 12px 14px;
   }
   .hero{
     padding-top: 28px;
   }
-}/* DEBUG: force visible blue */
-body {
-  color: blue !important;
-}
-
-h1, h2, h3, .brandName {
-  color: blue !important;
-}
-
-.btn.primary {
-  background: blue !important;
-  border-color: blue !important;
 }
