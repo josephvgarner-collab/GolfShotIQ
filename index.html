@@ -1,62 +1,86 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
-  <header class="header">
-  <div class="brand">
-    <img class="logo" src="./logo.jpg" alt="GolfShot IQ logo" />
-    <span class="brandName">GolfShot IQ</span>
-  </div>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GolfShot IQ — Coming Soon</title>
+    <meta
+      name="description"
+      content="GolfShot IQ — Strokes Gained… simplified. Coming soon."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<section class="hero">
-  <h1>
-    Strokes Gained…<br>
-    <span class="subHeadline">simplified.</span>
-  </h1>
+  <body>
+    <main class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="brand">
+          <img class="logo" src="./logo.jpg" alt="GolfShot IQ logo" />
+          <span class="brandName">GolfShot IQ</span>
+        </div>
 
-  <p class="subhead">
-    A clean strokes gained tracker for everyday golfers. Enter a round in minutes and get clear direction on what to practice next.
-  </p>
+        <span class="pill">Coming soon • Private beta</span>
+      </header>
 
-  <div class="buttons">
-    <a class="btn primary" href="#waitlist">Join the waitlist</a>
-    <a class="btn secondary" href="#how">How it works</a>
-  </div>
-</section>
+      <!-- Hero -->
+      <section class="hero">
+        <h1>Strokes Gained… <span class="headlineLite">simplified.</span></h1>
 
+        <p class="subhead">
+          A clean strokes gained tracker for everyday golfers. Enter a round in minutes and get clear
+          direction on what to practice next.
+        </p>
+
+        <div class="buttons">
+          <a class="btn primary" href="#waitlist">Join the waitlist</a>
+          <a class="btn secondary" href="#how">How it works</a>
+        </div>
+      </section>
+
+      <!-- How it works -->
       <section id="how" class="grid">
         <div class="card">
           <h3>Fast entry</h3>
-<p>Quick shot entry with just the details that matter.</p>
+          <p>Quick shot entry with just the details that matter.</p>
         </div>
+
         <div class="card">
           <h3>Benchmark by skill</h3>
-          <p>Strokes gained vs realistic handicap-based baselines.</p>
+          <p>Compare to realistic handicap-based baselines.</p>
         </div>
+
         <div class="card">
           <h3>Practice direction</h3>
-          <p>Turn results into what to work on this week—no noise.</p>
+          <p>Know what to work on this week—no noise.</p>
         </div>
       </section>
 
+      <!-- Waitlist -->
       <section id="waitlist" class="waitlist">
         <h2>Join the waitlist</h2>
-        <p class="muted">Be first in line when the beta opens. No spam.</p>
+        <p class="muted">Get notified when the beta opens. No spam.</p>
 
-        <!-- OPTION 1 (recommended): Formspree collects emails -->
-        <!-- Create a free Formspree form and replace the action URL below -->
+        <!-- Replace REPLACE_ME with your Formspree endpoint (recommended) -->
         <form class="form" action="https://formspree.io/f/REPLACE_ME" method="POST">
-          <input class="input" type="email" name="email" placeholder="you@example.com" required />
+          <input
+            class="input"
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
           <button class="btn primary" type="submit">Notify me</button>
         </form>
 
-        <!-- OPTION 2 (no setup): mailto fallback (remove the form above and uncomment below) -->
-        <!--
-        <a class="btn primary" href="mailto:hello@golfshotiq.com?subject=Waitlist%20-%20GolfShot%20IQ&body=Please%20add%20me%20to%20the%20waitlist.%20My%20email%20is:%20">
-          Email me to join
-        </a>
-        -->
+        <p class="tiny muted">
+          Don’t want Formspree yet? Tell me what you want (Mailchimp / ConvertKit / Google Form) and
+          I’ll swap the form in one edit.
+        </p>
       </section>
 
+      <!-- Footer -->
       <footer class="footer">
         <span class="muted">© <span id="year"></span> GolfShot IQ</span>
         <span class="muted">Contact: hello@golfshotiq.com</span>
