@@ -8,11 +8,11 @@
   <meta name="description" content="GolfShot IQ — Strokes Gained… simplified." />
 
   <!-- Favicon / Bookmark Icons -->
-  <link rel="icon" type="image/png" href="logo.png?v=2">
-  <link rel="apple-touch-icon" href="logo.png?v=2">
+  <link rel="icon" type="image/png" href="logo.png?v=3">
+  <link rel="apple-touch-icon" href="logo.png?v=3">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css?v=10" />
+  <!-- Styles (bump v= if you ever don’t see updates) -->
+  <link rel="stylesheet" href="styles.css?v=20" />
 </head>
 
 <body>
@@ -25,8 +25,8 @@
         <div class="brand-name">GolfShot IQ</div>
       </div>
 
-      <!-- Replace # with your App Store link when ready -->
-      <a href="#" class="btn outline">Download</a>
+      <!-- Replace the # with your App Store URL when ready -->
+      <a class="btn outline" href="#">Download</a>
     </header>
 
     <!-- Hero -->
@@ -40,9 +40,9 @@
       <p class="hero-secondary">No hardware required.</p>
 
       <div class="hero-cta">
-        <!-- Replace # with your App Store link when ready -->
-        <a href="#" class="btn primary">Download on the App Store</a>
-        <a href="#how" class="btn outline">How it works</a>
+        <!-- Replace the # with your App Store URL when ready -->
+        <a class="btn primary" href="#">Download on the App Store</a>
+        <a class="btn outline" href="#how">How it works</a>
       </div>
 
       <p class="pricing">
@@ -60,10 +60,16 @@
       <!-- Step 1 -->
       <div class="how-row">
         <div class="how-media tilt-left">
-          <div class="phone">
-            <img src="step1.PNG" alt="Shot entry with live strokes gained" />
+          <div class="phone-shell">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <img src="step1.PNG" alt="Shot entry with live strokes gained" />
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="how-copy">
           <div class="how-step">Step 1</div>
           <h3>Enter Your Round</h3>
@@ -77,10 +83,16 @@
       <!-- Step 2 -->
       <div class="how-row reverse">
         <div class="how-media tilt-right">
-          <div class="phone">
-            <img src="step3.PNG" alt="Round summary with strokes gained breakdown" />
+          <div class="phone-shell">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <img src="step3.PNG" alt="Round summary with strokes gained breakdown" />
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="how-copy">
           <div class="how-step">Step 2</div>
           <h3>Review Your Round Summary</h3>
@@ -91,24 +103,30 @@
         </div>
       </div>
 
-      <!-- Optional: third screenshot as a supporting visual row -->
+      <!-- Optional supporting screen -->
       <div class="how-row">
         <div class="how-media">
-          <div class="phone">
-            <img src="step2.PNG" alt="Strokes gained on the hole with benchmark comparison" />
+          <div class="phone-shell">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <img src="step2.PNG" alt="Strokes gained on the hole with benchmark comparison" />
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="how-copy">
           <div class="how-step">Bonus</div>
-          <h3>Get Live Hole Insights</h3>
+          <h3>Live Hole Insights</h3>
           <p>
-            See strokes gained on each hole and compare instantly across benchmarks to understand what’s costing you strokes.
+            Get strokes gained on each hole and compare instantly across benchmarks to understand what’s costing you strokes.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Short positioning -->
+    <!-- Positioning -->
     <section class="positioning">
       <h2>Built for golfers who want clarity.</h2>
       <p>
@@ -116,18 +134,19 @@
       </p>
 
       <div class="positioning-cta">
-        <!-- Replace # with your App Store link when ready -->
-        <a href="#" class="btn primary">Download on the App Store</a>
+        <!-- Replace the # with your App Store URL when ready -->
+        <a class="btn primary" href="#">Download on the App Store</a>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
       <div>© <span id="year"></span> GolfShot IQ</div>
+
       <div class="footer-links">
-        <a href="#" class="footer-link">Privacy</a>
-        <a href="#" class="footer-link">Terms</a>
-        <a href="mailto:hello@golfshotiq.com" class="footer-link">Contact</a>
+        <a class="footer-link" href="#">Privacy</a>
+        <a class="footer-link" href="#">Terms</a>
+        <a class="footer-link" href="mailto:hello@golfshotiq.com">Contact</a>
       </div>
     </footer>
 
