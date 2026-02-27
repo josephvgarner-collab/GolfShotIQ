@@ -297,4 +297,16 @@ h2{
   .hero{
     padding-top: 28px;
   }
+}/* DEBUG: force visible blue */
+body {
+  color: blue !important;
+}
+
+h1, h2, h3, .brandName {
+  color: blue !important;
+}
+
+.btn.primary {
+  background: blue !important;
+  border-color: blue !important;
 }
