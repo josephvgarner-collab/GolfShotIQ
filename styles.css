@@ -29,9 +29,8 @@ body{
 /* Header */
 .header{
   display:flex;
-  justify-content:space-between;
+  justify-content:flex-start;
   align-items:center;
-  gap:16px;
   margin-bottom:56px;
 }
 
@@ -54,21 +53,6 @@ body{
   color: var(--blue);
 }
 
-/* Chip (header CTA) */
-.chip{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:10px 14px;
-  border-radius:999px;
-  border:1px solid var(--border);
-  background:#fff;
-  color:var(--text);
-  font-size:13px;
-  font-weight:600;
-  white-space:nowrap;
-}
-
 /* Hero */
 .hero{
   margin-bottom:64px;
@@ -79,7 +63,6 @@ body{
   margin:0;
   letter-spacing:-1px;
   line-height:1.05;
-  color: var(--text);
 }
 
 .hero-sub{
@@ -91,54 +74,39 @@ body{
 }
 
 .hero-secondary{
-  margin-top:10px;
+  margin-top:12px;
   font-weight:600;
-  color:var(--text);
-  max-width: 820px;
-  line-height: 1.55;
+  line-height:1.5;
 }
 
 .hero-secondary div{
-  margin-top:2px;
+  margin-top:4px;
 }
 
-.hero-cta{
-  margin-top:18px;
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  align-items:center;
+/* Status Button */
+.hero-status{
+  margin-top:22px;
 }
 
-.pricing{
-  margin-top:12px;
-  font-size:14px;
-  color:var(--muted);
-}
-
-/* Buttons */
-.btn{
-  padding:12px 18px;
-  border-radius:999px;
-  font-weight:600;
-  text-decoration:none;
-  font-size:14px;
+.status-button{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:8px;
-  transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+  padding:12px 22px;
+  border-radius:999px;
+  font-weight:600;
+  font-size:14px;
+  background: var(--blue-dark);
+  color:#fff;
+  letter-spacing:0.01em;
+  box-shadow: 0 6px 18px rgba(33,33,110,.18);
 }
 
-.btn:hover{
-  box-shadow: var(--shadow);
-  transform: translateY(-1px);
-}
-
-.btn.outline{
-  border:1px solid var(--border);
-  color:var(--text);
-  background:#fff;
+/* Pricing */
+.pricing{
+  margin-top:14px;
+  font-size:14px;
+  color:var(--muted);
 }
 
 /* How It Works */
@@ -146,21 +114,15 @@ body{
   margin-bottom:64px;
 }
 
-.how-head{
-  margin-bottom:10px;
-}
-
 .how-row{
   display:grid;
   grid-template-columns: 0.95fr 1.05fr;
   gap:28px;
   align-items:center;
-  padding:18px 0;
+  padding:22px 0;
 }
 
-/* Copy */
 .how-step{
-  display:inline-block;
   font-size:12px;
   font-weight:700;
   letter-spacing:0.08em;
@@ -172,33 +134,29 @@ body{
 .how-copy h3{
   margin:0;
   font-size:18px;
-  letter-spacing:-0.02em;
-  color:var(--text);
 }
 
 .how-copy p{
-  margin:10px 0 0;
+  margin-top:10px;
   color:var(--muted);
   line-height:1.6;
 }
 
-/* Phone layout */
+/* Phone */
 .how-media{
   display:flex;
   justify-content:flex-end;
 }
 
 .phone-shell{
-  max-width: 380px;
+  max-width:380px;
 }
 
-/* Device frame (depth + shading) */
 .phone-frame{
-  position: relative;
-  border-radius: 34px;
-  padding: 14px;
-  background: linear-gradient(180deg, #0c1324 0%, #070b15 100%);
-  border: 1px solid rgba(255,255,255,.06);
+  position:relative;
+  border-radius:34px;
+  padding:14px;
+  background:linear-gradient(180deg,#0c1324 0%,#070b15 100%);
   box-shadow:
     0 44px 90px rgba(0,0,0,.30),
     0 22px 44px rgba(0,0,0,.18),
@@ -208,30 +166,26 @@ body{
 .phone-frame::before{
   content:"";
   position:absolute;
-  inset: 6px;
-  border-radius: 28px;
-  background: radial-gradient(120% 90% at 15% 8%, rgba(255,255,255,.22) 0%, rgba(255,255,255,0) 60%);
-  pointer-events:none;
+  inset:6px;
+  border-radius:28px;
+  background:radial-gradient(120% 90% at 15% 8%, rgba(255,255,255,.22) 0%, rgba(255,255,255,0) 60%);
 }
 
 .phone-notch{
   position:absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 42%;
-  height: 18px;
-  background: #05070c;
-  border-radius: 0 0 14px 14px;
-  box-shadow: 0 1px 0 rgba(255,255,255,.06);
-  z-index: 3;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:42%;
+  height:18px;
+  background:#05070c;
+  border-radius:0 0 14px 14px;
 }
 
 .phone-screen{
-  border-radius: 26px;
+  border-radius:26px;
   overflow:hidden;
   background:#000;
-  border: 1px solid rgba(255,255,255,.06);
 }
 
 .phone-screen img{
@@ -239,124 +193,34 @@ body{
   display:block;
 }
 
-/* 3D tilt (desktop only) */
+/* Tilt */
 .tilt-left .phone-shell{
-  transform: perspective(1200px) rotateY(-12deg) rotateX(3deg);
-  transform-origin: center;
+  transform:perspective(1200px) rotateY(-12deg) rotateX(3deg);
 }
 
 .tilt-right .phone-shell{
-  transform: perspective(1200px) rotateY(12deg) rotateX(3deg);
-  transform-origin: center;
+  transform:perspective(1200px) rotateY(12deg) rotateX(3deg);
 }
 
-/* Positioning block */
-.positioning{
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:28px;
-  margin-bottom:56px;
-}
-
-.positioning p{
-  margin-top:10px;
-  color:var(--muted);
-  line-height:1.6;
-  max-width: 820px;
-}
-
-/* Footer */
-.footer{
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  flex-wrap:wrap;
-  font-size:13px;
-  color:var(--muted);
-  border-top:1px solid var(--border);
-  padding-top:18px;
-}
-
-.footer-links{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-}
-
-.footer-link{
-  color:var(--muted);
-  text-decoration:none;
-}
-
-.footer-link:hover{
-  text-decoration:underline;
-}
-
-/* Responsive */
-@media (max-width:900px){
-  .hero h1{ font-size:40px; }
-}
-
-/* Mobile rules: increase separation between phone shadow and next step */
+/* Mobile */
 @media (max-width:820px){
-  .header{
-    margin-bottom:36px;
-  }
-
   .how-row{
-    grid-template-columns: 1fr;
-    gap:16px;
-    padding: 22px 0;          /* more vertical breathing room */
+    grid-template-columns:1fr;
+    padding:32px 0; /* more breathing room */
   }
 
-  /* Add extra space after each phone so next step isn't in the shadow */
   .how-media{
-    margin-bottom: 10px;
+    margin-bottom:18px; /* space after phone shadow */
   }
 
-  /* Step 1 + Bonus: text then phone */
-  .how-row.step1 .how-copy,
-  .how-row.bonus .how-copy{ order: 1; }
-  .how-row.step1 .how-media,
-  .how-row.bonus .how-media{ order: 2; }
-
-  /* Step 2: side-by-side phone left, text right (if room) */
-  .how-row.step2{
-    grid-template-columns: 1fr 1fr;
-    gap:16px;
-    align-items:start;
-  }
-  .how-row.step2 .how-media{ order: 1; justify-content:flex-start; margin-bottom:0; }
-  .how-row.step2 .how-copy{ order: 2; }
-
-  /* Disable tilt on mobile */
   .phone-shell{
-    max-width: 100%;
-    transform: none !important;
-  }
-  .tilt-left .phone-shell,
-  .tilt-right .phone-shell{
-    transform: none !important;
-  }
-
-  .how-row.step2 .phone-shell{
-    max-width: 320px;
+    max-width:100%;
+    transform:none !important;
   }
 }
 
 @media (max-width:600px){
-  .header{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:16px;
+  .hero h1{
+    font-size:36px;
   }
-
-  .hero h1{ font-size:36px; }
-
-  /* On very small screens, Step 2 stacks (text then phone) */
-  .how-row.step2{
-    grid-template-columns: 1fr;
-  }
-  .how-row.step2 .how-copy{ order: 1; }
-  .how-row.step2 .how-media{ order: 2; justify-content:flex-start; }
 }
