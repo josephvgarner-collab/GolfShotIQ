@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" href="logo.png?v=1">
   <link rel="apple-touch-icon" href="logo.png?v=1">
 
-  <link rel="stylesheet" href="styles.css?v=900" />
+  <link rel="stylesheet" href="styles.css?v=1200" />
 </head>
 
 <body>
@@ -52,7 +52,7 @@
         <h2>How It Works</h2>
       </div>
 
-      <!-- Step 1 (Text -> Phone) -->
+      <!-- Step 1: Text LEFT, Phone RIGHT (tilt inward) -->
       <div class="how-row step1">
         <div class="how-copy">
           <div class="how-step">Step 1</div>
@@ -63,7 +63,7 @@
           </p>
         </div>
 
-        <div class="how-media tilt-left">
+        <div class="how-media tilt-in-left">
           <div class="phone-shell">
             <div class="phone-frame">
               <div class="phone-notch"></div>
@@ -75,18 +75,9 @@
         </div>
       </div>
 
-      <!-- Step 2 (Text first in HTML, flipped on desktop via CSS grid areas) -->
+      <!-- Step 2: Phone LEFT (tilt inward), Text RIGHT -->
       <div class="how-row step2">
-        <div class="how-copy">
-          <div class="how-step">Step 2</div>
-          <h3>Review Insights</h3>
-          <p>
-            See where you gained or lost strokes by category — driving, approach, around the green,
-            putting — plus hole-by-hole detail.
-          </p>
-        </div>
-
-        <div class="how-media tilt-right">
+        <div class="how-media tilt-in-right">
           <div class="phone-shell">
             <div class="phone-frame">
               <div class="phone-notch"></div>
@@ -96,9 +87,18 @@
             </div>
           </div>
         </div>
+
+        <div class="how-copy">
+          <div class="how-step">Step 2</div>
+          <h3>Review Insights</h3>
+          <p>
+            See where you gained or lost strokes by category — driving, approach, around the green,
+            putting — plus hole-by-hole detail.
+          </p>
+        </div>
       </div>
 
-      <!-- Bonus (Text -> Phone) -->
+      <!-- Bonus: Text LEFT, Phone RIGHT (face-on) -->
       <div class="how-row bonus">
         <div class="how-copy">
           <div class="how-step">Bonus</div>
