@@ -1,13 +1,11 @@
 :root{
-  /* Rich navy that reads "navy" (not black) */
-  --navy:#1e293b;        /* slate navy */
-  --navy-deep:#0f172a;   /* deeper navy for primary buttons */
-  --muted:#64748b;       /* cool gray */
-  --muted2:#94a3b8;
+  --navy:#0f172a;     /* rich navy (reads navy, not royal) */
+  --muted:#64748b;    /* cool gray */
   --border:#e2e8f0;
-  --surface:#f8fafc;     /* soft blue-gray tint */
+  --surface:#ffffff;
+  --chip:#f1f5f9;     /* light gray chip for icons (not navy tinted) */
   --bg:#ffffff;
-  --shadow: 0 12px 32px rgba(30,41,59,.10);
+  --shadow: 0 10px 24px rgba(15,23,42,.08);
   --radius: 22px;
 }
 
@@ -23,32 +21,18 @@ body{
   text-rendering: optimizeLegibility;
 }
 
-/* subtle background softness so it’s not stark black/white */
-body:before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  background:
-    radial-gradient(900px 420px at 12% 0%, rgba(30,41,59,.06), transparent 60%),
-    radial-gradient(700px 360px at 85% 10%, rgba(30,41,59,.05), transparent 55%);
-  z-index:-1;
-}
-
 .wrap{
   max-width: 980px;
   margin: 0 auto;
   padding: 28px 20px 48px;
 }
 
-/* Top bar */
+/* Header */
 .top{
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:12px;
-  padding-bottom: 16px;                  /* adds breathing room */
-  border-bottom: 1px solid rgba(30,41,59,.08);
 }
 
 .brand{
@@ -66,7 +50,7 @@ body:before{
   background:#ffffff;
   border:1px solid var(--border);
   padding:8px;
-  box-shadow: 0 10px 26px rgba(30,41,59,.12);
+  box-shadow: 0 10px 22px rgba(15,23,42,.10);
 }
 
 .brandText{
@@ -80,8 +64,8 @@ body:before{
   font-weight: 700;
   letter-spacing: -0.03em;
   font-size: 22px;
-  color: var(--navy);
   line-height: 1.1;
+  color: var(--navy);
 }
 
 .brandTag{
@@ -90,27 +74,24 @@ body:before{
   letter-spacing: -0.01em;
 }
 
-/* Top right CTA */
 .topCta{
   border-radius:999px;
-  border:1px solid rgba(30,41,59,.18);
+  border:1px solid var(--border);
   padding:10px 14px;
   text-decoration:none;
   color:var(--navy);
   font-size:14px;
   background:#fff;
   white-space: nowrap;
-  flex: 0 0 auto;
 }
 
 .topCta:hover{
-  background:var(--surface);
   box-shadow: var(--shadow);
 }
 
 /* Hero */
 .hero{
-  padding: 44px 0 26px;  /* less cramped now that pill is gone */
+  padding: 56px 0 26px;
 }
 
 h1{
@@ -143,25 +124,24 @@ h1{
   justify-content:center;
   padding: 12px 16px;
   border-radius: 999px;
-  border: 1px solid rgba(30,41,59,.18);
+  border: 1px solid var(--border);
   background: #fff;
   color: var(--navy);
   text-decoration:none;
   font-weight: 600;
   font-size: 14px;
-  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, opacity .15s ease;
+  transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
 }
 
 .btn:hover{
   box-shadow: var(--shadow);
   transform: translateY(-1px);
-  background:var(--surface);
 }
 
 .btn.primary{
-  background: var(--navy-deep);
+  background: var(--navy);
   color: #fff;
-  border-color: var(--navy-deep);
+  border-color: var(--navy);
 }
 
 .btn.primary:hover{
@@ -177,28 +157,27 @@ h1{
 }
 
 .card{
-  background: var(--surface);  /* adds navy-tinted surface so it’s not stark */
-  border:1px solid rgba(30,41,59,.12);
+  background: var(--surface);            /* white tiles (no navy tint) */
+  border:1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px 18px 16px;
-  box-shadow: 0 10px 26px rgba(30,41,59,.06);
+  box-shadow: var(--shadow);
 }
 
 .icon{
-  width:40px;
-  height:40px;
+  width:44px;
+  height:44px;
   border-radius: 16px;
-  background: rgba(30,41,59,.10);
+  background: var(--chip);               /* light gray chip */
   display:flex;
   align-items:center;
   justify-content:center;
-  color: var(--navy);
+  color: var(--navy);                    /* icon stroke is navy */
 }
 
 .icon svg{
-  width:20px;
-  height:20px;
-}
+  width:22px;
+  height:22px;
 }
 
 .card h3{
@@ -221,11 +200,11 @@ h1{
 }
 
 .whoInner{
-  border:1px solid rgba(30,41,59,.12);
-  background: #ffffff; /* keep this crisp */
+  border:1px solid var(--border);
+  background: #fff;
   border-radius: var(--radius);
   padding: 22px;
-  box-shadow: 0 10px 26px rgba(30,41,59,.06);
+  box-shadow: var(--shadow);
 }
 
 h2{
@@ -260,20 +239,20 @@ h2{
   flex: 1 1 260px;
   padding: 12px 14px;
   border-radius: 16px;
-  border: 1px solid rgba(30,41,59,.18);
+  border: 1px solid var(--border);
   font-size: 14px;
   outline: none;
   background:#fff;
 }
 
-.input::placeholder{ color: var(--muted2); }
-.input:focus{ border-color: rgba(30,41,59,.55); }
+.input::placeholder{ color:#94a3b8; }
+.input:focus{ border-color: var(--navy); }
 
 /* Footer */
 .footer{
   margin-top: 44px;
   padding-top: 18px;
-  border-top: 1px solid rgba(30,41,59,.12);
+  border-top: 1px solid var(--border);
   display:flex;
   justify-content:space-between;
   gap:10px;
@@ -284,28 +263,23 @@ h2{
 
 .contact{ color: var(--navy); }
 
-/* Mobile fixes */
+/* Responsive */
 @media (max-width: 820px){
   .cards{ grid-template-columns: 1fr; }
 }
 
-/* Strong fix: mobile header CTA drops under brand and becomes full-width */
-@media (max-width: 520px){
+/* iPhone: stack header so Join Waitlist never breaks */
+@media (max-width: 600px){
   .top{
-    flex-wrap: wrap;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
   }
-
-  .brand{
-    flex: 1 1 100%;
-  }
-
   .topCta{
     width: 100%;
     text-align: center;
     padding: 12px 14px;
   }
-
   .hero{
     padding-top: 28px;
   }
