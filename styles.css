@@ -1,10 +1,16 @@
 :root{
-  --navy:#243447;     /* rich navy (reads navy, not royal) */
-  --muted:#64748b;    /* cool gray */
+  /* Lighter navy so it reads BLUE, not black */
+  --navy: #334155;        /* slate */
+  --navy-deep: #1e293b;   /* for primary buttons */
+  --muted:#64748b;        /* cool gray */
+  --muted2:#94a3b8;
   --border:#e2e8f0;
-  --surface:#ffffff;
-  --chip:#f1f5f9;     /* light gray chip for icons (not navy tinted) */
   --bg:#ffffff;
+
+  /* Keep tiles white; keep icon chip light gray */
+  --tile:#ffffff;
+  --chip:#f1f5f9;
+
   --shadow: 0 10px 24px rgba(15,23,42,.08);
   --radius: 22px;
 }
@@ -110,7 +116,6 @@ h1{
   color: var(--muted);
 }
 
-/* Buttons */
 .ctaRow{
   display:flex;
   flex-wrap:wrap;
@@ -118,6 +123,13 @@ h1{
   margin-top: 22px;
 }
 
+.pricingNote{
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Buttons */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -139,9 +151,9 @@ h1{
 }
 
 .btn.primary{
-  background: var(--navy);
+  background: var(--navy-deep);
   color: #fff;
-  border-color: var(--navy);
+  border-color: var(--navy-deep);
 }
 
 .btn.primary:hover{
@@ -157,40 +169,40 @@ h1{
 }
 
 .card{
-  background: var(--surface);            /* white tiles (no navy tint) */
+  background: var(--tile);
   border:1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px 18px 16px;
   box-shadow: var(--shadow);
 }
+
+/* Icon chip: bigger so it “captures” the icon */
 .icon{
-  width:52px;                 /* bigger chip */
-  height:52px;                /* bigger chip */
-  border-radius: 18px;        /* softer roundness */
-  background: var(--chip);    /* light gray */
+  width:52px;
+  height:52px;
+  border-radius: 18px;
+  background: var(--chip);
   display:flex;
   align-items:center;
   justify-content:center;
   color: var(--navy);
-  margin-bottom: 6px;         /* slight spacing above title */
+  margin-bottom: 6px;
 }
 
 .icon svg{
-  width:24px;                 /* slightly larger icon */
+  width:24px;
   height:24px;
-}
 }
 
 .card h3{
-  margin:8px 0 4px;   /* tighter spacing */
+  margin: 8px 0 4px;
   font-size:16px;
   letter-spacing:-0.02em;
   color: var(--navy);
 }
-}
 
 .card p{
-  margin:8px 0 0;
+  margin:0;
   color: var(--muted);
   line-height:1.5;
   font-size: 14px;
@@ -247,7 +259,7 @@ h2{
   background:#fff;
 }
 
-.input::placeholder{ color:#94a3b8; }
+.input::placeholder{ color: var(--muted2); }
 .input:focus{ border-color: var(--navy); }
 
 /* Footer */
