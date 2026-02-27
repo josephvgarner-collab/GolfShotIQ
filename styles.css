@@ -191,9 +191,19 @@ body{
 }
 
 @media (max-width:600px){
+
   .header{
     flex-direction:column;
+    align-items:flex-start;   /* LEFT ALIGN */
     gap:16px;
+  }
+
+  .brand{
+    width:100%;
+  }
+
+  .btn.outline{
+    align-self:flex-start;    /* LEFT ALIGN BUTTON */
   }
 
   .hero h1{
