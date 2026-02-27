@@ -1,16 +1,12 @@
 :root{
-  /* Brand */
-  :root{
-  --blue: #21216e;
-  --blue-dark: #1a1a57;
+  /* Brand (landing page) */
+  --blue: #21216E;
+  --blue-dark: #1A1A57;
 
   /* Neutrals */
   --text: var(--blue);
   --muted: #64748b;
-  --muted2:#94a3b8;
-
   --border: #e2e8f0;
-  --light-gray: #f1f5f9;
 
   --shadow: 0 10px 24px rgba(15,23,42,.08);
   --shadow-strong: 0 28px 60px rgba(15,23,42,.18), 0 10px 18px rgba(15,23,42,.10);
@@ -55,7 +51,7 @@ body{
 }
 
 .brand-name{
-  font-weight:700;
+  font-weight:800;
   font-size:22px;
   letter-spacing:-0.02em;
 }
@@ -83,7 +79,7 @@ body{
 
 .hero-secondary{
   margin-top:8px;
-  font-weight:800;
+  font-weight:900;
   color:var(--text);
 }
 
@@ -104,7 +100,7 @@ body{
 .btn{
   padding:12px 18px;
   border-radius:999px;
-  font-weight:800;
+  font-weight:900;
   text-decoration:none;
   font-size:14px;
   display:inline-flex;
@@ -151,19 +147,13 @@ body{
 
 .how-row{
   display:grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap:22px;
   align-items:center;
   padding:18px 0;
 }
 
-.how-row.reverse{
-  grid-template-columns: 0.9fr 1.1fr;
-}
-
-.how-row.reverse .how-media{ order:2; }
-.how-row.reverse .how-copy{ order:1; }
-
+/* Copy */
 .how-step{
   display:inline-block;
   font-size:12px;
@@ -187,18 +177,14 @@ body{
   line-height:1.6;
 }
 
-/* Phone mock (space gray / black) */
+/* Phone layout */
 .how-media{
   display:flex;
-  justify-content:flex-start;
-}
-
-.how-row.reverse .how-media{
   justify-content:flex-end;
 }
 
 .phone-shell{
-  max-width: 360px;
+  max-width: 380px;
 }
 
 /* Device frame */
@@ -248,14 +234,14 @@ body{
   display:block;
 }
 
-/* True 3D tilt (angled away, not a flat spin) */
+/* True 3D tilt (angled away) */
 .tilt-left .phone-shell{
-  transform: perspective(1200px) rotateY(-14deg) rotateX(3deg);
+  transform: perspective(1200px) rotateY(-12deg) rotateX(3deg);
   transform-origin: center;
 }
 
 .tilt-right .phone-shell{
-  transform: perspective(1200px) rotateY(14deg) rotateX(3deg);
+  transform: perspective(1200px) rotateY(12deg) rotateX(3deg);
   transform-origin: center;
 }
 
@@ -311,23 +297,17 @@ body{
 }
 
 @media (max-width:820px){
-  .how-row,
-  .how-row.reverse{
+  .how-row{
     grid-template-columns: 1fr;
   }
 
-  .how-row.reverse .how-media,
-  .how-row.reverse .how-copy{
-    order: initial;
+  .how-media{
+    justify-content:flex-start;
   }
 
   .phone-shell{
     max-width: 420px;
     transform: none !important;
-  }
-
-  .how-media{
-    justify-content:flex-start !important;
   }
 
   .tilt-left .phone-shell,
@@ -339,7 +319,7 @@ body{
 @media (max-width:600px){
   .header{
     flex-direction:column;
-    align-items:flex-start; /* left aligned on mobile */
+    align-items:flex-start;
     gap:16px;
     margin-bottom:36px;
   }
