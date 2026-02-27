@@ -1,119 +1,112 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>GolfShot IQ</title>
   <meta name="description" content="GolfShot IQ — Strokes Gained… simplified." />
 
-  <!-- Favicon / Bookmark Icons -->
+  <!-- Favicon / Bookmark -->
   <link rel="icon" type="image/png" href="logo.png?v=1">
   <link rel="apple-touch-icon" href="logo.png?v=1">
 
-  <!-- Cache-busted CSS -->
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=1" />
 </head>
 
-  <body>
-    <main class="wrap">
-      <!-- Header -->
-      <header class="top">
-       <div class="brandText">
-  <div class="brandName">GolfShot IQ</div>
-</div>
+<body>
+  <main class="container">
 
-        <a href="#waitlist" class="topCta">Join Waitlist</a>
-      </header>
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <img src="logo.png" alt="GolfShot IQ logo" class="logo">
+        <div class="brand-name">GolfShot IQ</div>
+      </div>
 
-      <!-- Hero -->
-      <section class="hero">
-        <h1>Strokes Gained… simplified.</h1>
+      <a href="#waitlist" class="btn outline">Join Waitlist</a>
+    </header>
 
-       <p class="subhead">
-  A clean strokes gained tracker for golfers who want clear direction on what to practice next.
-</p>
-<p class="subhead secondary">
-  No hardware required.
-</p>
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Strokes Gained… simplified.</h1>
 
-        <div class="ctaRow">
-          <a href="#waitlist" class="btn primary">Join the waitlist</a>
-          <a href="#how" class="btn">How it works</a>
+      <p class="hero-sub">
+        A clean strokes gained tracker for golfers who want clear direction on what to practice next.
+      </p>
+
+      <p class="hero-secondary">
+        No hardware required.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#waitlist" class="btn primary">Join the waitlist</a>
+        <a href="#how" class="btn outline">How it works</a>
+      </div>
+
+      <p class="pricing">
+        5 free rounds. $29.99/year for unlimited access.
+      </p>
+    </section>
+
+    <!-- Features -->
+    <section id="how" class="features">
+
+      <div class="card">
+        <div class="icon-box">
+          ✏️
         </div>
+        <h3>Fast Entry</h3>
+        <p>Quick shot input with just the details that matter.</p>
+      </div>
 
-        <p class="pricingNote">5 free rounds. $29.99/year for unlimited access.</p>
-      </section>
-
-      <!-- Cards -->
-      <section id="how" class="cards">
-        <div class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 20h4l10-10a2 2 0 0 0-4-4L4 16v4z"></path>
-            </svg>
-          </div>
-          <h3>Fast Entry</h3>
-          <p>Quick shot input with just the details that matter.</p>
+      <div class="card">
+        <div class="icon-box">
+          📊
         </div>
+        <h3>Benchmark by Skill</h3>
+        <p>Choose your benchmark — from TOUR Pro to 20 handicap — and see where you’re gaining or losing strokes.</p>
+      </div>
 
-        <div class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 20V10"></path>
-              <path d="M10 20V4"></path>
-              <path d="M16 20v-7"></path>
-              <path d="M22 20v-3"></path>
-            </svg>
-          </div>
-          <h3>Benchmark by Skill</h3>
-          <p>Choose your benchmark — from TOUR Pro to 20 handicap — and see where you’re gaining or losing strokes.</p>
+      <div class="card">
+        <div class="icon-box">
+          🎯
         </div>
+        <h3>Practice Direction</h3>
+        <p>Know what’s costing you strokes so your next practice session actually moves your score.</p>
+      </div>
 
-        <div class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="8"></circle>
-              <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-          </div>
-          <h3>Practice Direction</h3>
-          <p>Know what’s costing you strokes so your next practice session actually moves your score.</p>
-        </div>
-      </section>
+    </section>
 
-      <!-- Positioning -->
-      <section class="who">
-        <div class="whoInner">
-          <h2>Built for golfers who want clarity.</h2>
-          <p>
-            Track strokes gained during your round or enter it after. No hardware. No sensors. Just simple
-            inputs and clear direction on what to practice next.
-          </p>
-        </div>
-      </section>
+    <!-- Positioning -->
+    <section class="positioning">
+      <h2>Built for golfers who want clarity.</h2>
+      <p>
+        Track strokes gained during your round or enter it after. 
+        No sensors. No devices. Just insight.
+      </p>
+    </section>
 
-      <!-- Waitlist -->
-      <section id="waitlist" class="waitlist">
-        <h2>Join the waitlist</h2>
-        <p class="muted">Get notified when the beta opens. No spam.</p>
+    <!-- Waitlist -->
+    <section id="waitlist" class="waitlist">
+      <h2>Join the waitlist</h2>
+      <p class="muted">Be the first to try the beta.</p>
 
-        <!-- We’ll wire this to Mailchimp next -->
-        <form class="form" action="#" method="POST">
-          <input class="input" type="email" name="email" placeholder="you@example.com" required />
-          <button class="btn primary" type="submit">Notify me</button>
-        </form>
-      </section>
+      <form class="waitlist-form">
+        <input type="email" placeholder="you@example.com" required>
+        <button type="submit" class="btn primary">Notify me</button>
+      </form>
+    </section>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <div>© <span id="year"></span> GolfShot IQ</div>
-        <div>Contact: <span class="contact">hello@golfshotiq.com</span></div>
-      </footer>
-    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      © <span id="year"></span> GolfShot IQ
+    </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
