@@ -188,7 +188,17 @@ h1{
   width:40px;
   height:40px;
   border-radius: 16px;
-  background: rgba(30,41,59,.10);  /* navy tint */
+  background: rgba(30,41,59,.10);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color: var(--navy);
+}
+
+.icon svg{
+  width:20px;
+  height:20px;
+}
 }
 
 .card h3{
