@@ -296,10 +296,11 @@ body{
   .hero h1{ font-size:40px; }
 }
 
+/* Mobile: always show the Step text before the phone */
 @media (max-width:820px){
-  .how-row{
-    grid-template-columns: 1fr;
-  }
+  .how-row .how-copy{ order: 1; }
+  .how-row .how-media{ order: 2; }
+}
 
   .how-media{
     justify-content:flex-start;
