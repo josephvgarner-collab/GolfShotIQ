@@ -266,14 +266,11 @@ body{
 }
 
 /* Mobile */
-@media (max-width:820px){
-  .how-row{
-    grid-template-columns:1fr;
-    grid-template-areas:
-      "copy"
-      "media";
-    gap:16px;
-    padding:32px 0;         /* more breathing room between steps */
+/* FIX: Step 2 must stack like the others on mobile */
+.how-row.step2{
+  grid-template-areas:
+    "copy"
+    "media";
   }
 
   /* Step 2: remove desktop indent/spacing tweaks so it matches mobile rhythm */
