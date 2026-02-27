@@ -1,7 +1,8 @@
 :root{
   /* Brand */
-  --blue: #37468c;
-  --blue-dark: #2c3970;
+  :root{
+  --blue: #21216e;
+  --blue-dark: #1a1a57;
 
   /* Neutrals */
   --text: var(--blue);
