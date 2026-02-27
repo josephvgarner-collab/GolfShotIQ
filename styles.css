@@ -1,9 +1,11 @@
 :root{
-  --navy:#1e293b;        /* rich slate navy */
-  --navy-deep:#0f172a;   /* deeper navy for buttons */
+  /* Rich navy that reads "navy" (not black) */
+  --navy:#1e293b;        /* slate navy */
+  --navy-deep:#0f172a;   /* deeper navy for primary buttons */
   --muted:#64748b;       /* cool gray */
+  --muted2:#94a3b8;
   --border:#e2e8f0;
-  --surface:#f8fafc;     /* soft tinted white */
+  --surface:#f8fafc;     /* soft blue-gray tint */
   --bg:#ffffff;
   --shadow: 0 12px 32px rgba(30,41,59,.10);
   --radius: 22px;
@@ -21,6 +23,18 @@ body{
   text-rendering: optimizeLegibility;
 }
 
+/* subtle background softness so it’s not stark black/white */
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(900px 420px at 12% 0%, rgba(30,41,59,.06), transparent 60%),
+    radial-gradient(700px 360px at 85% 10%, rgba(30,41,59,.05), transparent 55%);
+  z-index:-1;
+}
+
 .wrap{
   max-width: 980px;
   margin: 0 auto;
@@ -33,12 +47,15 @@ body{
   align-items:center;
   justify-content:space-between;
   gap:12px;
+  padding-bottom: 16px;                  /* adds breathing room */
+  border-bottom: 1px solid rgba(30,41,59,.08);
 }
 
 .brand{
   display:flex;
   align-items:center;
   gap:14px;
+  min-width:0;
 }
 
 .logo{
@@ -55,6 +72,8 @@ body{
 .brandText{
   display:flex;
   flex-direction:column;
+  gap:4px;
+  min-width:0;
 }
 
 .brandName{
@@ -62,21 +81,26 @@ body{
   letter-spacing: -0.03em;
   font-size: 22px;
   color: var(--navy);
+  line-height: 1.1;
 }
 
 .brandTag{
   font-size: 13px;
   color: var(--muted);
+  letter-spacing: -0.01em;
 }
 
+/* Top right CTA */
 .topCta{
   border-radius:999px;
-  border:1px solid var(--border);
+  border:1px solid rgba(30,41,59,.18);
   padding:10px 14px;
   text-decoration:none;
   color:var(--navy);
   font-size:14px;
   background:#fff;
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 .topCta:hover{
@@ -86,31 +110,11 @@ body{
 
 /* Hero */
 .hero{
-  padding: 56px 0 26px;
-  border-bottom:1px solid rgba(30,41,59,.08);
-}
-
-.pill{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  border:1px solid var(--border);
-  padding:8px 12px;
-  border-radius:999px;
-  font-size:12px;
-  color:var(--muted);
-  background:#fff;
-}
-
-.dot{
-  width:8px;
-  height:8px;
-  border-radius:999px;
-  background:var(--navy);
+  padding: 44px 0 26px;  /* less cramped now that pill is gone */
 }
 
 h1{
-  margin: 18px 0 0;
+  margin: 0;
   font-size: clamp(36px, 5vw, 54px);
   line-height: 1.04;
   letter-spacing: -0.04em;
@@ -139,7 +143,7 @@ h1{
   justify-content:center;
   padding: 12px 16px;
   border-radius: 999px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(30,41,59,.18);
   background: #fff;
   color: var(--navy);
   text-decoration:none;
@@ -173,18 +177,18 @@ h1{
 }
 
 .card{
-  background: var(--surface);
-  border:1px solid var(--border);
+  background: var(--surface);  /* adds navy-tinted surface so it’s not stark */
+  border:1px solid rgba(30,41,59,.12);
   border-radius: var(--radius);
   padding: 18px 18px 16px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 26px rgba(30,41,59,.06);
 }
 
 .icon{
   width:40px;
   height:40px;
   border-radius: 16px;
-  background: rgba(30,41,59,.08);
+  background: rgba(30,41,59,.10);  /* navy tint */
 }
 
 .card h3{
@@ -201,17 +205,17 @@ h1{
   font-size: 14px;
 }
 
-/* Who section */
+/* Positioning section */
 .who{
   margin-top: 20px;
 }
 
 .whoInner{
-  border:1px solid var(--border);
-  background: var(--surface);
+  border:1px solid rgba(30,41,59,.12);
+  background: #ffffff; /* keep this crisp */
   border-radius: var(--radius);
   padding: 22px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 26px rgba(30,41,59,.06);
 }
 
 h2{
@@ -234,7 +238,6 @@ h2{
 }
 
 .muted{ color: var(--muted); }
-.tiny{ font-size: 12px; margin-top: 10px; max-width: 760px; }
 
 .form{
   display:flex;
@@ -247,24 +250,20 @@ h2{
   flex: 1 1 260px;
   padding: 12px 14px;
   border-radius: 16px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(30,41,59,.18);
   font-size: 14px;
   outline: none;
+  background:#fff;
 }
 
-.input::placeholder{
-  color:#94a3b8;
-}
-
-.input:focus{
-  border-color: var(--navy);
-}
+.input::placeholder{ color: var(--muted2); }
+.input:focus{ border-color: rgba(30,41,59,.55); }
 
 /* Footer */
 .footer{
   margin-top: 44px;
   padding-top: 18px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(30,41,59,.12);
   display:flex;
   justify-content:space-between;
   gap:10px;
@@ -273,29 +272,31 @@ h2{
   color: var(--muted);
 }
 
-.contact{
-  color: var(--navy);
-}
+.contact{ color: var(--navy); }
 
+/* Mobile fixes */
 @media (max-width: 820px){
   .cards{ grid-template-columns: 1fr; }
 }
-/* Mobile header fix (CTA drops under brand) */
+
+/* Strong fix: mobile header CTA drops under brand and becomes full-width */
 @media (max-width: 520px){
   .top{
     flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
   }
 
   .brand{
-    min-width: 0;
     flex: 1 1 100%;
   }
 
   .topCta{
     width: 100%;
     text-align: center;
-    white-space: nowrap;
+    padding: 12px 14px;
+  }
+
+  .hero{
+    padding-top: 28px;
   }
 }
