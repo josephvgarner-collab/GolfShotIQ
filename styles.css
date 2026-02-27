@@ -54,7 +54,7 @@ body{
   color: var(--blue);
 }
 
-/* Simple chip (header CTA) */
+/* Chip (header CTA) */
 .chip{
   display:inline-flex;
   align-items:center;
@@ -95,21 +95,19 @@ body{
   font-weight:600;
   color:var(--text);
   max-width: 820px;
-  line-height: 1.45;
+  line-height: 1.55;
+}
+
+.hero-secondary div{
+  margin-top:2px;
 }
 
 .hero-cta{
-  margin-top:22px;
+  margin-top:18px;
   display:flex;
   gap:14px;
   flex-wrap:wrap;
   align-items:center;
-}
-
-.helper{
-  margin-top:12px;
-  font-size:13px;
-  color:var(--muted);
 }
 
 .pricing{
@@ -137,14 +135,6 @@ body{
   transform: translateY(-1px);
 }
 
-.btn.primary{
-  background:var(--blue-dark);
-  color:#fff;
-  border:1px solid var(--blue-dark);
-}
-
-.btn.primary:hover{ opacity:.92; }
-
 .btn.outline{
   border:1px solid var(--border);
   color:var(--text);
@@ -157,14 +147,7 @@ body{
 }
 
 .how-head{
-  margin-bottom:22px;
-}
-
-.how-sub{
-  margin:10px 0 0;
-  color:var(--muted);
-  line-height:1.5;
-  max-width:720px;
+  margin-bottom:10px;
 }
 
 .how-row{
@@ -282,10 +265,6 @@ body{
   max-width: 820px;
 }
 
-.positioning-cta{
-  margin-top:18px;
-}
-
 /* Footer */
 .footer{
   display:flex;
@@ -318,11 +297,21 @@ body{
   .hero h1{ font-size:40px; }
 }
 
-/* Mobile rules: explicit per-row ordering so it never breaks */
+/* Mobile rules: increase separation between phone shadow and next step */
 @media (max-width:820px){
+  .header{
+    margin-bottom:36px;
+  }
+
   .how-row{
     grid-template-columns: 1fr;
     gap:16px;
+    padding: 22px 0;          /* more vertical breathing room */
+  }
+
+  /* Add extra space after each phone so next step isn't in the shadow */
+  .how-media{
+    margin-bottom: 10px;
   }
 
   /* Step 1 + Bonus: text then phone */
@@ -331,13 +320,13 @@ body{
   .how-row.step1 .how-media,
   .how-row.bonus .how-media{ order: 2; }
 
-  /* Step 2: side-by-side phone left, text right */
+  /* Step 2: side-by-side phone left, text right (if room) */
   .how-row.step2{
     grid-template-columns: 1fr 1fr;
     gap:16px;
     align-items:start;
   }
-  .how-row.step2 .how-media{ order: 1; justify-content:flex-start; }
+  .how-row.step2 .how-media{ order: 1; justify-content:flex-start; margin-bottom:0; }
   .how-row.step2 .how-copy{ order: 2; }
 
   /* Disable tilt on mobile */
@@ -360,7 +349,6 @@ body{
     flex-direction:column;
     align-items:flex-start;
     gap:16px;
-    margin-bottom:36px;
   }
 
   .hero h1{ font-size:36px; }
