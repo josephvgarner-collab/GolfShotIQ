@@ -1,18 +1,21 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GolfShot IQ</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="description" content="GolfShot IQ — Strokes Gained… simplified." />
+    <title>GolfShot IQ</title>
+    <meta name="description" content="GolfShot IQ — Strokes Gained… simplified." />
 
-  <!-- Favicon / bookmark icon -->
-  <link rel="icon" href="/logo.jpg" />
-  <link rel="apple-touch-icon" href="/logo.jpg" />
+    <!-- Favicons / Bookmark icons -->
+    <!-- These files should be in the SAME folder as index.html -->
+    <link rel="icon" href="favicon.png?v=1" type="image/png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=1" />
+    <link rel="manifest" href="site.webmanifest?v=1" />
 
-  <link rel="stylesheet" href="styles.css" />
-</head>
+    <!-- Cache-bust CSS so your changes always show -->
+    <link rel="stylesheet" href="styles.css?v=1" />
+  </head>
 
   <body>
     <main class="wrap">
@@ -34,14 +37,16 @@
         <h1>Strokes Gained… simplified.</h1>
 
         <p class="subhead">
-          A clean strokes gained tracker for everyday golfers. Enter a round in minutes and get clear
-          direction on what to practice next.
+          A clean strokes gained tracker for golfers who want clear direction on what to practice next.
+          No hardware required.
         </p>
 
         <div class="ctaRow">
           <a href="#waitlist" class="btn primary">Join the waitlist</a>
           <a href="#how" class="btn">How it works</a>
         </div>
+
+        <p class="pricingNote">5 free rounds. $29.99/year for unlimited access.</p>
       </section>
 
       <!-- Cards -->
@@ -86,8 +91,8 @@
         <div class="whoInner">
           <h2>Built for golfers who want clarity.</h2>
           <p>
-            Track strokes gained during your round or enter it after. No hardware. No sensors. Just
-            simple inputs and clear direction on what to practice next.
+            Track strokes gained during your round or enter it after. No hardware. No sensors. Just simple
+            inputs and clear direction on what to practice next.
           </p>
         </div>
       </section>
@@ -97,7 +102,7 @@
         <h2>Join the waitlist</h2>
         <p class="muted">Get notified when the beta opens. No spam.</p>
 
-        <!-- We'll wire this to Mailchimp next -->
+        <!-- We’ll wire this to Mailchimp next -->
         <form class="form" action="#" method="POST">
           <input class="input" type="email" name="email" placeholder="you@example.com" required />
           <button class="btn primary" type="submit">Notify me</button>
