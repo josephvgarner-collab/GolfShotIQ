@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Terms of Service — GolfShot IQ</title>
+  <meta name="description" content="Terms of Service for GolfShot IQ." />
+
+  <link rel="icon" type="image/png" href="logo.png?v=1">
+  <link rel="apple-touch-icon" href="logo.png?v=1">
+  <link rel="stylesheet" href="styles.css?v=900" />
+</head>
+
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="brand">
+        <img src="logo.png" alt="GolfShot IQ logo" class="logo">
+        <div class="brand-name">GolfShot IQ</div>
+      </div>
+    </header>
+
+    <section class="positioning">
+      <h2>Terms of Service</h2>
+      <p><strong>Last updated:</strong> <span id="d"></span></p>
+
+      <p>
+        These are simple terms for the staged GolfShot IQ website and early app releases.
+        We’ll refine them as the product launches.
+      </p>
+
+      <h3>Use of the service</h3>
+      <p>
+        You agree to use GolfShot IQ in a lawful way and not to misuse or disrupt the service.
+      </p>
+
+      <h3>No guarantees</h3>
+      <p>
+        GolfShot IQ provides performance insights and summaries based on your inputs. The service is provided “as is”
+        and we can’t guarantee accuracy for every situation or outcome on the course.
+      </p>
+
+      <h3>Accounts & subscriptions</h3>
+      <p>
+        If the app offers subscriptions, billing and renewals will be handled through the App Store, subject to Apple’s terms.
+      </p>
+
+      <h3>Changes</h3>
+      <p>
+        We may update the service and these terms over time. Continued use means you accept the updated terms.
+      </p>
+
+      <h3>Contact</h3>
+      <p>
+        Questions? Email us at <a class="footer-link" href="mailto:hello@golfshotiq.com">hello@golfshotiq.com</a>.
+      </p>
+
+      <p>
+        <a class="footer-link" href="index.html">Back to home</a>
+      </p>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> GolfShot IQ</div>
+      <div class="footer-links">
+        <a class="footer-link" href="privacy.html">Privacy</a>
+        <a class="footer-link" href="mailto:hello@golfshotiq.com">Contact</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("d").textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>
