@@ -1,6 +1,6 @@
 :root{
   --blue: #013D59;
-  --blue-dark: #012F45;
+  --blue-dark: #013D59;  /* same as primary */
 
   --text: #0F172A;
   --muted: #64748B;
