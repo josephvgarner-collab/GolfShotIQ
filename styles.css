@@ -69,6 +69,13 @@ body{
   margin:0;
   letter-spacing:-1px;
   line-height:1.05;
+  /* Brand blue for headlines */
+.hero h1,
+.how h2,
+.positioning h2,
+.how-copy h3,
+.brand-name{
+  color: var(--blue);
 }
 
 .hero-sub{
