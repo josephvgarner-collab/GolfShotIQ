@@ -1,24 +1,25 @@
-/* styles.css */
 :root{
-  --blue: #013D59;        /* New primary */
-  --blue-dark: #012F45;   /* Hover / deeper tone */
+  --blue: #013D59;
+  --blue-dark: #012F45;
 
-  --text: #0F172A;        /* Slightly softer than black */
+  --text: #0F172A;
   --muted: #64748B;
   --border: #E2E8F0;
 
   --shadow: 0 10px 24px rgba(15,23,42,.08);
 }
 
-*{ box-sizing:border-box; }
+*{
+  box-sizing:border-box;
+}
 
 body{
   margin:0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background:#ffffff;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:#FFFFFF;
   color:var(--text);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
 }
 
 .container{
@@ -28,6 +29,7 @@ body{
 }
 
 /* Header */
+
 .header{
   display:flex;
   justify-content:flex-start;
@@ -35,16 +37,17 @@ body{
   margin-bottom:56px;
 }
 
-/* Brand link (clickable home) */
 .brand{
   display:flex;
   align-items:center;
   gap:14px;
   text-decoration:none;
-  color: var(--blue);
+  color:var(--blue);
 }
 
-.brand:hover{ opacity:0.88; }
+.brand:hover{
+  opacity:.9;
+}
 
 .logo{
   width:60px;
@@ -56,10 +59,11 @@ body{
   font-weight:500;
   font-size:22px;
   letter-spacing:-0.01em;
-  color: var(--blue);
+  color:var(--blue);
 }
 
 /* Hero */
+
 .hero{
   margin-bottom:64px;
 }
@@ -69,13 +73,7 @@ body{
   margin:0;
   letter-spacing:-1px;
   line-height:1.05;
-  /* Brand blue for headlines */
-.hero h1,
-.how h2,
-.positioning h2,
-.how-copy h3,
-.brand-name{
-  color: var(--blue);
+  color:var(--blue);
 }
 
 .hero-sub{
@@ -90,13 +88,13 @@ body{
   margin-top:12px;
   font-weight:600;
   line-height:1.5;
+  color:var(--blue);
 }
 
 .hero-secondary div{
   margin-top:4px;
 }
 
-/* Status button */
 .hero-status{
   margin-top:22px;
 }
@@ -109,10 +107,10 @@ body{
   border-radius:999px;
   font-weight:600;
   font-size:14px;
-  background: var(--blue-dark);
+  background:var(--blue-dark);
   color:#fff;
-  letter-spacing:0.01em;
-  box-shadow: 0 6px 18px rgba(33,33,110,.18);
+  letter-spacing:.01em;
+  box-shadow:0 6px 18px rgba(1,61,89,.18);
 }
 
 .pricing{
@@ -122,6 +120,7 @@ body{
 }
 
 /* How It Works */
+
 .how{
   margin-bottom:64px;
 }
@@ -130,15 +129,19 @@ body{
   margin-bottom:10px;
 }
 
+.how h2{
+  color:var(--blue);
+  margin:0 0 10px 0;
+}
+
 .how-row{
   display:grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns:0.95fr 1.05fr;
   gap:28px;
   align-items:center;
   padding:22px 0;
 }
 
-/* Step 2 desktop spacing */
 .how-row.step2{
   gap:38px;
 }
@@ -146,7 +149,7 @@ body{
 .how-step{
   font-size:12px;
   font-weight:700;
-  letter-spacing:0.08em;
+  letter-spacing:.08em;
   text-transform:uppercase;
   color:var(--muted);
   margin-bottom:8px;
@@ -155,6 +158,7 @@ body{
 .how-copy h3{
   margin:0;
   font-size:18px;
+  color:var(--blue);
 }
 
 .how-copy p{
@@ -163,7 +167,8 @@ body{
   line-height:1.6;
 }
 
-/* Phone */
+/* Phone Frame */
+
 .how-media{
   display:flex;
   justify-content:flex-end;
@@ -178,7 +183,7 @@ body{
   border-radius:34px;
   padding:14px;
   background:linear-gradient(180deg,#0c1324 0%,#070b15 100%);
-  border: 1px solid rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.06);
   box-shadow:
     0 44px 90px rgba(0,0,0,.30),
     0 22px 44px rgba(0,0,0,.18),
@@ -203,15 +208,15 @@ body{
   height:18px;
   background:#05070c;
   border-radius:0 0 14px 14px;
-  box-shadow: 0 1px 0 rgba(255,255,255,.06);
-  z-index: 3;
+  box-shadow:0 1px 0 rgba(255,255,255,.06);
+  z-index:3;
 }
 
 .phone-screen{
   border-radius:26px;
   overflow:hidden;
   background:#000;
-  border: 1px solid rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.06);
 }
 
 .phone-screen img{
@@ -219,18 +224,20 @@ body{
   display:block;
 }
 
-/* Desktop tilts (inward toward center) */
+/* Desktop Tilts */
+
 .tilt-in-left .phone-shell{
-  transform: perspective(1200px) rotateY(-12deg) rotateX(3deg);
-  transform-origin: center;
+  transform:perspective(1200px) rotateY(-12deg) rotateX(3deg);
+  transform-origin:center;
 }
 
 .tilt-in-right .phone-shell{
-  transform: perspective(1200px) rotateY(12deg) rotateX(3deg);
-  transform-origin: center;
+  transform:perspective(1200px) rotateY(12deg) rotateX(3deg);
+  transform-origin:center;
 }
 
-/* Positioning */
+/* Positioning Section */
+
 .positioning{
   border:1px solid var(--border);
   border-radius:20px;
@@ -238,14 +245,20 @@ body{
   margin-bottom:56px;
 }
 
+.positioning h2{
+  color:var(--blue);
+  margin:0;
+}
+
 .positioning p{
   margin-top:10px;
   color:var(--muted);
   line-height:1.6;
-  max-width: 820px;
+  max-width:820px;
 }
 
 /* Footer */
+
 .footer{
   display:flex;
   justify-content:space-between;
@@ -272,7 +285,8 @@ body{
   text-decoration:underline;
 }
 
-/* Mobile: all steps text then phone; disable tilts */
+/* Mobile */
+
 @media (max-width:820px){
   .how-row{
     grid-template-columns:1fr;
@@ -280,9 +294,8 @@ body{
     padding:32px 0;
   }
 
-  /* Ensure text comes before phone on mobile for every step */
-  .how-copy{ order: 1; }
-  .how-media{ order: 2; }
+  .how-copy{ order:1; }
+  .how-media{ order:2; }
 
   .how-media{
     margin-bottom:18px;
@@ -296,5 +309,7 @@ body{
 }
 
 @media (max-width:600px){
-  .hero h1{ font-size:36px; }
+  .hero h1{
+    font-size:36px;
+  }
 }
