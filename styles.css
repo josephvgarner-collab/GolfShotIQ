@@ -1,11 +1,11 @@
 /* styles.css */
 :root{
-  --blue: #21216E;
-  --blue-dark: #1A1A57;
+  --blue: #013D59;        /* New primary */
+  --blue-dark: #012F45;   /* Hover / deeper tone */
 
-  --text: var(--blue);
-  --muted: #64748b;
-  --border: #e2e8f0;
+  --text: #0F172A;        /* Slightly softer than black */
+  --muted: #64748B;
+  --border: #E2E8F0;
 
   --shadow: 0 10px 24px rgba(15,23,42,.08);
 }
